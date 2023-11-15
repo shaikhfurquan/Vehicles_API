@@ -1,0 +1,49 @@
+Required Packages
+$ npm i express mongoose dotenv bcrypt jsonwebtoken cookie-parser
+
+//Users
+
+POST -->  localhost:6363/users/register
+{
+  "name" : "kp",
+  "email" : "kp@gmail.com",
+  "password" : "123"
+}
+
+POST --> localhost:6363/users/login
+{
+  "email" : "mk@gmail.com",
+  "password" : "123"
+}
+
+
+GET --> localhost:6363/users/logout
+GET --> localhost:6363/users/myprofile
+GET --> localhost:6363/users/655389f76370b7c4b2cae957
+
+//Records
+POST --> localhost:6363/cars/add
+{
+  "brand" : "Kia", 
+  "model" : "carnival", 
+  "capacity" : "7 Seater", 
+  "price" : "4Miiliom", 
+  "variant": "Desel"
+}
+
+GET --> localhost:6363/cars/mycars
+
+PUT --> localhost:6363/cars/6553bd9deddec69336fc5318
+{
+  "brand" : "Kia",
+  "price" : "10M"
+}
+GET --> localhost:6363/cars/mycars
+
+
+DELETE --> localhost:6363/cars/6553c0a71bad130411c13683
+GET --> localhost:6363/cars/mycars
+
+
+GET --> localhost:6363/cars/allcars
+GET --> localhost:6363/cars/6553c8a3871f01149030b4cc
