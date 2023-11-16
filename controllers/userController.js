@@ -47,7 +47,7 @@ const userLogin = async (req,res) =>{
     })
 
     //if password match then
-    generateCookie(user , res , 201 , `Welcome ${user.name}`)
+    // generateCookie(user , res , 201 , `Welcome ${user.name}`)
 
 }
 

@@ -7,12 +7,15 @@ import userRouter from './routes/userRoute.js'
 import carRouter from './routes/carRoute.js'
 
 
+
 const app = express();
 dotenv.config() 
 const PORT = process.env.PORT
 const MONGO_URL = process.env.MONGO_URL
 const DB_NAME = process.env.DB_NAME
 const FRONTEND_URL = process.env.FRONTEND_URL
+
+
 
 app.use(express.json());
 app.use(cookieParser())
