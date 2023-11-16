@@ -16,8 +16,8 @@ const generateCookie = (user, res, statusCode = 200, message) => {
     res.status(201).cookie("token", token, {
         httpOnly: true,
         maxAge: 10 * 60 * 1000,
-        sameSite : NODE_ENV === "Development" ? "lax" : "node",
-        secure : NODE_ENV === "Development" ? false:true
+        // sameSite : NODE_ENV === "Development" ? "lax" : "node",
+        // secure : NODE_ENV === "Development" ? false:true
     }).json({
         success: true,
         message

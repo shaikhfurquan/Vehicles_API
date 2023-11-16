@@ -39,15 +39,24 @@ const userLogin = async (req,res) =>{
 
     //if user found then we will verify that password
     const isMatch = await bcrypt.compare(password , user.password)
+    console.log(isMatch);
+    console.log(user);
 
     //if password is not match then
-    if(!isMatch) return res.status(404).json({
+    if(!isMatch) {
+         res.status(404).json({
         success: false,
         message : "Invalid Credentials..."
     })
-
+// }else{
+//     res.status(200).json({
+//         success: true,
+//         message : "Success",
+//         data : user
+//     })
+}
     //if password match then
-    // generateCookie(user , res , 201 , `Welcome ${user.name}`)
+    generateCookie(user , res , 201 , `Welcome ${user.name}`)
 
 }
 
