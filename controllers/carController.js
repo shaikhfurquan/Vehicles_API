@@ -34,7 +34,7 @@ const updateCar = async(req,res) =>{
     const {brand, model, capacity, price, variant} = req.body
 
     const id = req.params.id
-    const car = await CarModel.findByIdAndUpdate(id , req.body)
+    const car = await CarModel.findByIdAndUpdate(id , req.body , {new : true})
     
     //if we have id but blog doesn't present 
     if(!car) return res.status(404).json({
@@ -43,7 +43,7 @@ const updateCar = async(req,res) =>{
     })
 
     //if we got the record then we will update it
-    car.save()
+    // car.save()
     res.json({
         success: true,
         message: "Car record updated successfully...",
